@@ -33,6 +33,9 @@ backend:
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
 
 integrations:
+  azure:
+    - host: dev.azure.com
+      token: ${AZURE_TOKEN}
   github:
     - host: github.com
       token: ${GITHUB_TOKEN}
@@ -64,6 +67,13 @@ techdocs:
 auth:
   # see https://backstage.io/docs/auth/ to learn about auth providers
   providers:
+
+    microsoft:
+      development:
+        clientId: ${AUTH_MICROSOFT_CLIENT_ID}
+        clientSecret: ${AUTH_MICROSOFT_CLIENT_SECRET}
+        tenantId: ${AUTH_MICROSOFT_TENANT_ID}
+
     github:
       development:
         clientId: ${GITHUB_CLIENT_ID}

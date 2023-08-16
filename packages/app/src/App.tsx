@@ -44,7 +44,7 @@ const app = createApp({
       <SignInPage
         {...props}
         auto
-        provider={providers}
+        providers={providers}
       />
     )
   },
