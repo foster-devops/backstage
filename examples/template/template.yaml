@@ -33,7 +33,8 @@ spec:
           ui:field: RepoUrlPicker
           ui:options:
             allowedHosts:
-              - dev.azure.com
+              - github.com
+              # - dev.azure.com
 
   # These steps are executed in the scaffolder backend, using data that we gathered
   # via the parameters above.
